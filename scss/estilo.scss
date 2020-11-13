@@ -1,0 +1,202 @@
+img {
+    max-width: 100%;
+}
+
+strong {
+    color: red;
+}
+
+@import "textos";
+
+.bordes {
+    border-radius: 5px;
+    border: solid 1px green;
+    margin: 1px 1px 15px 1px;
+    padding: 5px;
+}
+/*------------- BEM EN NAVEGADOR ---------*/
+.nav__enlaces {
+    padding: 1px;
+    border-radius: 5px;
+    border: 3px solid #808000;
+    margin: 1px;
+}
+
+.nav--textoArtEnl {
+    font-size: 18px;
+    color: white;
+    background-color: green;
+}
+
+.nav--textoIndVidSus {
+    font-size: 18px;
+    color: white;
+    background-color: #004000;
+}
+
+
+/* ------- MAPA, EACH Y BUCLE EN LOGOS DE REDES EN NAVEGADOR ------- */
+$redes:(
+logoTuit: #CCECF7,
+logoFace: #D9E4F8,
+logoInsta: #F6DDE1,
+logoWhat: #CEF1D1,
+);
+
+/* ---Bucle----- */
+@each $redSocial,
+$color in $redes {
+    .nav--#{$redSocial} {
+        background-color: $color;
+    }
+}
+
+/* -------EXTEND EN LOGOS DE REDES EN NAVEGADOR ------------*/
+.navLogos {
+    padding: 10px;
+    margin: 2px;
+}
+
+.nav--logoFace {
+    @extend .navLogos;
+    border: 3px solid #566EA7;
+
+}
+
+.nav--logoInsta {
+    @extend .navLogos;
+    border: 3px solid #E84C67;
+
+}
+
+.nav--logoTuit {
+    @extend .navLogos;
+    border: 3px solid #2BB2E1;
+
+}
+
+.nav--logoWhat {
+    @extend .navLogos;
+    border: 3px solid #2CA638;
+}
+
+
+/* ----- MIXIN EN  TÍTULOS (h2), SUBTÍTULOS (h3) Y PIE DE IMAGENES (h4)---*/
+
+
+@mixin titulos ($size) {
+    font-size: $size;
+    font-style: $styleTitulos;
+    color: $colorTextoTitulos;
+}
+
+h2 {
+    @include titulos($sizeh2)
+}
+
+h3 {
+    @include titulos($sizeh3)
+}
+
+h4 {
+    @include titulos($sizeh4)
+}
+
+pre {
+    font-size: $sizePreP;
+    font-style: $styleTitulos;
+}
+
+p {
+    font-size: $sizePreP;
+    text-align: $justificado;
+}
+
+/*---------------TEXTO VIDEO- -------------*/
+
+h5 {
+    @include titulos ($sizeh2)
+    font-family: $fontVideo
+}
+
+.articuloVideo {
+    font-family: $fontVideo;
+    color: $colorTextoTitulos;
+}
+
+/*------------- ALINEADO INTERIOR DE CONTENEDORES ---------*/
+
+.alineado {
+    text-align: center;
+}
+
+/*----------------- FOCUS EN PÁGINA SUSCRIPCIÓN -----------*/
+
+.magnitud {
+    transition: all 2s;
+}
+
+.magnitud:focus {
+    width: 200px;
+    height: 30px;
+    font-size: 25px;
+}
+
+
+/*----------  PÁGINA ENLACES DE INTERÉS ------------*/
+
+.estiloEnlaces {
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 15px;
+    color: #006666;
+    background-color: #DEFEDE;
+    text-align: left;
+}
+
+ol li {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    color: green;
+}
+
+.otroColor {
+    color: #42DE42;
+}
+
+.colorFondo {
+    background-color: #DEFEDE;
+}
+
+/*-----------ANIMACIÓN PÁGINA ENLACES DE INTERÉS ------------*/
+.libroAnimado {
+    animation-duration: 8s;
+    animation-fill-mode: both;
+}
+
+@keyframes libroAnimado {
+    0% {
+        opacity: 0;
+        transform: scale3d(.3, .3, .3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.libroAnimado {
+    animation-name: libroAnimado;
+}
+
+
+/* ------------------ENCABEZADO-------------*/
+.fondoEncabezado {
+    background-color: #673D13;
+}
+.centrarDebajoParrafo {
+    text-align: center;
+    font-style: normal;
+    font-size: 14px;
+    
+}

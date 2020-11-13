@@ -1,0 +1,152 @@
+@charset "UTF-8";
+img {
+  max-width: 100%; }
+
+strong {
+  color: red; }
+
+.bordes {
+  border-radius: 5px;
+  border: solid 1px green;
+  margin: 1px 1px 15px 1px;
+  padding: 5px; }
+
+/*------------- BEM EN NAVEGADOR ---------*/
+.nav__enlaces {
+  padding: 1px;
+  border-radius: 5px;
+  border: 3px solid #808000;
+  margin: 1px; }
+
+.nav--textoArtEnl {
+  font-size: 18px;
+  color: white;
+  background-color: green; }
+
+.nav--textoIndVidSus {
+  font-size: 18px;
+  color: white;
+  background-color: #004000; }
+
+/* ------- MAPA, EACH Y BUCLE EN LOGOS DE REDES EN NAVEGADOR ------- */
+/* ---Bucle----- */
+.nav--logoTuit {
+  background-color: #CCECF7; }
+
+.nav--logoFace {
+  background-color: #D9E4F8; }
+
+.nav--logoInsta {
+  background-color: #F6DDE1; }
+
+.nav--logoWhat {
+  background-color: #CEF1D1; }
+
+/* -------EXTEND EN LOGOS DE REDES EN NAVEGADOR ------------*/
+.navLogos, .nav--logoFace, .nav--logoInsta, .nav--logoTuit, .nav--logoWhat {
+  padding: 10px;
+  margin: 2px; }
+
+.nav--logoFace {
+  border: 3px solid #566EA7; }
+
+.nav--logoInsta {
+  border: 3px solid #E84C67; }
+
+.nav--logoTuit {
+  border: 3px solid #2BB2E1; }
+
+.nav--logoWhat {
+  border: 3px solid #2CA638; }
+
+/* ----- MIXIN EN  TÍTULOS (h2), SUBTÍTULOS (h3) Y PIE DE IMAGENES (h4)---*/
+h2 {
+  font-size: 30px;
+  font-style: italic;
+  color: #006666; }
+
+h3 {
+  font-size: 20px;
+  font-style: italic;
+  color: #006666; }
+
+h4 {
+  font-size: 10px;
+  font-style: italic;
+  color: #006666; }
+
+pre {
+  font-size: 14px;
+  font-style: italic; }
+
+p {
+  font-size: 14px;
+  text-align: justify; }
+
+/*---------------TEXTO VIDEO- -------------*/
+h5 {
+  font-size: 30px;
+  font-style: italic;
+  color: #006666;
+  font-family: "Lobster Two", cursive; }
+
+.articuloVideo {
+  font-family: "Lobster Two", cursive;
+  color: #006666; }
+
+/*------------- ALINEADO INTERIOR DE CONTENEDORES ---------*/
+.alineado {
+  text-align: center; }
+
+/*----------------- FOCUS EN PÁGINA SUSCRIPCIÓN -----------*/
+.magnitud {
+  transition: all 2s; }
+
+.magnitud:focus {
+  width: 200px;
+  height: 30px;
+  font-size: 25px; }
+
+/*----------  PÁGINA ENLACES DE INTERÉS ------------*/
+.estiloEnlaces {
+  font-family: "Comic Sans MS", sans-serif;
+  font-size: 15px;
+  color: #006666;
+  background-color: #DEFEDE;
+  text-align: left; }
+
+ol li {
+  display: block;
+  margin: 0px;
+  padding: 0px;
+  color: green; }
+
+.otroColor {
+  color: #42DE42; }
+
+.colorFondo {
+  background-color: #DEFEDE; }
+
+/*-----------ANIMACIÓN PÁGINA ENLACES DE INTERÉS ------------*/
+.libroAnimado {
+  animation-duration: 8s;
+  animation-fill-mode: both; }
+
+@keyframes libroAnimado {
+  0% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+
+.libroAnimado {
+  animation-name: libroAnimado; }
+
+/* ------------------ENCABEZADO-------------*/
+.fondoEncabezado {
+  background-color: #673D13; }
+
+.centrarDebajoParrafo {
+  text-align: center;
+  font-style: normal;
+  font-size: 14px; }
