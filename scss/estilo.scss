@@ -13,7 +13,7 @@ strong {
     border: solid 1px green;
     margin: 1px 1px 15px 1px;
     padding: 5px;
-}
+}*
 /*------------- BEM EN NAVEGADOR ---------*/
 .nav__enlaces {
     padding: 1px;
@@ -25,25 +25,29 @@ strong {
 .nav--textoArtEnl {
     font-size: 18px;
     color: white;
-    background-color: green;
+    background-color: #673D13;
 }
 
 .nav--textoIndVidSus {
     font-size: 18px;
     color: white;
-    background-color: #004000;
+    background-color: #673D13;
 }
 
+/*......QUITAR EL FONDO NAVEGADOR MENU-----------*/
+.modificarBg{
+    background-color: transparent!important;
+}
 
 /* ------- MAPA, EACH Y BUCLE EN LOGOS DE REDES EN NAVEGADOR ------- */
 $redes:(
-logoTuit: #CCECF7,
+/*logoTuit: #CCECF7,
 logoFace: #D9E4F8,
 logoInsta: #F6DDE1,
-logoWhat: #CEF1D1,
+logoWhat: #CEF1D1,*/
 );
 
-/* ---Bucle----- */
+/*---Bucle-----*/ 
 @each $redSocial,
 $color in $redes {
     .nav--#{$redSocial} {
@@ -59,25 +63,25 @@ $color in $redes {
 
 .nav--logoFace {
     @extend .navLogos;
-    border: 3px solid #566EA7;
+    /*border: 3px solid #566EA7;*/
 
 }
 
 .nav--logoInsta {
     @extend .navLogos;
-    border: 3px solid #E84C67;
+    /*border: 3px solid #E84C67;*/
 
 }
 
 .nav--logoTuit {
     @extend .navLogos;
-    border: 3px solid #2BB2E1;
+    /*border: 3px solid #2BB2E1;*/
 
 }
 
 .nav--logoWhat {
     @extend .navLogos;
-    border: 3px solid #2CA638;
+    /*border: 3px solid #2CA638;*/
 }
 
 
@@ -122,49 +126,82 @@ h5 {
 .articuloVideo {
     font-family: $fontVideo;
     color: $colorTextoTitulos;
+    font-size: 18px;
 }
 
 /*------------- ALINEADO INTERIOR DE CONTENEDORES ---------*/
 
-.alineado {
+/*---Todas las paginas---*/
+.alineadoArticulos {
     text-align: center;
+    margin:8px;
+    background-color: #F2EFEA;
+    border-radius:20px;
+    box-shadow: 5px 5px 2px #999;
+    padding:15px;
 }
 
-/*----------------- FOCUS EN PÁGINA SUSCRIPCIÓN -----------*/
+.alineadoEnlacesDeInteres {
+    text-align: center;
+    margin:10px;
+    background-color: #F2EFEA;
+    border-radius:20px;
+    box-shadow: 5px 5px 2px #999;
+    padding:20px;
+}
+
+.alineadoPaginaArticulos {
+    text-align: center;
+    margin:20px;
+    background-color: #F2EFEA;
+    border-radius:20px;
+    box-shadow: 5px 5px 2px #999;
+    padding:15px;
+}
+
+.alineadoFooter{
+    text-align: center;
+    margin:10px;
+    padding:40px;
+    color: white;
+    background-color: #673D13;
+}
+
+.alineadoEncabezado{
+    text-align: center;
+    background-color: #673D13;
+    margin:3px;
+        
+}
+.alineadoFecha{
+    text-align: center;
+    background-color: #673D13;
+    margin:3px;
+    color:white;  
+    padding:15px;
+}
+/*------cambio en los links---*/
+a:hover {
+  font-size:20px;
+  color:red;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  color: #006666;
+  }
+
+/*----------------- PÁGINA SUSCRIPCIÓN -----------*/
 
 .magnitud {
     transition: all 2s;
+    
 }
 
 .magnitud:focus {
     width: 200px;
     height: 30px;
     font-size: 25px;
-}
-
-
-/*----------  PÁGINA ENLACES DE INTERÉS ------------*/
-
-.estiloEnlaces {
-    font-family: "Comic Sans MS", sans-serif;
-    font-size: 15px;
-    color: #006666;
-    text-align: left;
-}
-
-ol li {
-    display: block;
-    margin: 0px;
-    padding: 0px;
-    color: green;
-}
-
-.otroColor {
-    color: #42DE42;
-}
-
-.colorFondo {
-    background-color: #DEFEDE;
 }
 
 /*-----------ANIMACIÓN PÁGINA ENLACES DE INTERÉS ------------*/
@@ -188,14 +225,81 @@ ol li {
     animation-name: libroAnimado;
 }
 
+/*----------  PÁGINA ENLACES DE INTERÉS ------------*/
 
-/* ------------------ENCABEZADO-------------*/
-.fondoEncabezado {
-    background-color: #673D13;
+.estiloEnlaces {
+    font-family: "Comic Sans MS", sans-serif;
+    font-size: 16px;
+    color: #006666;
+    text-align: left;
 }
+
+ol li {
+    display: block;
+    margin: 0px;
+    padding: 0px;
+    color: green;
+}
+
+.otroColor {
+    color: #42DE42;
+}
+
+.colorFondo {
+    background-color: #DEFEDE;
+}
+.alineado{
+    text-align:center;
+}
+/*.bordes {
+    border-radius: 5px;
+    border: solid 1px green;
+    margin: 1px 1px 15px 1px;
+    padding: 5px;
+}*/
+
+/* --------------- TODAS LAS PAGINAS --------------------------*/
 .centrarDebajoParrafo {
     text-align: center;
     font-style: normal;
     font-size: 14px;
     
 }
+/* ---------SUSCRIPCION----------------------*/
+.nombre{
+border-color: black;
+    
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 20px;
+    color: black;
+    background: none;
+    }
+/*------------ARTICULOS----------------*/
+/*body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}*/
+
+/*h3 {
+  margin-top: 2rem;
+}*/
+
+/*.row {
+  margin-bottom: 1rem;
+}*/
+/*.row .row {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}*/
+/*[class*="col-"] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid rgba(86,61,124,.2);
+}*/
+
+/*hr {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}*/

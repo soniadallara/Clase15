@@ -13,20 +13,33 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 
-<body>
+<body style="background-color:#CABCAE">
     <!--------------------LOGO-------------------->
     <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-lg-10 fondoEncabezado alineado">
+        <div class="row">
+            <div class="col medium-4 small-12 large-4 alineadoEncabezado">
                 <img src="../images/DiarioDeLibros.jpg" alt="Diario de Libros">
+            </div>
+        </div>
+    </div>
+    <!------------------------- FECHA -------------------->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col medium-4 small-12 large-4 alineadoFecha">
+                <div>
+                    <h6>FECHA: 04/12/2020 - Frecuencia Mensual</h6>
+                </div>
+                <div>
+                    <h6><a style="color:white" class="linkEdicionesAnteriores" href="#" target="blank">Ir a Ediciones Anteriores</a></h6>
+                </div>
             </div>
         </div>
     </div>
     <!--------------------NAVBAR---------------------------->
     <div class="container-fluid">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 bordes">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="row">
+            <div class="col medium-4 small-12 large-4">
+                <nav class="navbar navbar-expand-lg navbar-light modificarBg bg-light">
                     <!--<a class="navbar-brand" href="#">Navbar</a>-->
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -66,40 +79,12 @@
                     </div>
                 </nav>
             </div>
-            <div class="col-lg-4 bordes">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <!--<a class="navbar-brand" href="#">Navbar</a>-->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link " href="#"><span class="nav_logosRedes nav--logoFace">
-                                        <img src="../images/facebook.gif" alt="Facebook"></a></span>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><span class="nav_logosRedes nav--logoInsta"><img src="../images/instagram.gif" alt="Instagram"></a></span>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><span class="nav_logosRedes nav--logoTuit"><img src="../images/twitter.gif" alt="Twitter"></a></span>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><span class="nav_logosRedes nav--logoWhat"><img src="../images/whatsapp.gif" alt="WhatsApp"></a>
-                            </li>
-                            <!--<li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </li>-->
-                        </ul>
-                    </div>
-                </nav>
-            </div>
         </div>
     </div>
     <!------------------------FORMULARIO------------------>
     <div class="container-fluid">
         <div class="row  justify-content-center">
-            <div class="col-lg-10 bordes alineado">
+            <div class="col-lg-10 alineadoArticulos">
                 <form action="#" method="POST">
                     <h3><label for="Nombre">Nombre</label>
                         <input type="text" name="Nombre" placeholder="Nombre" class="magnitud"></h3>
@@ -109,54 +94,94 @@
                     <h3>
                         <label for="Email">Email </label>
                         <input type="text" name="Email" placeholder="Email" class="magnitud"></h3>
-                    <h3>
+                    <!--<h3>
                         <label for="Estado civil">Estado civil</label>
-                        <select name="Estado civil" id="Estado civil">
+                        select name="Estado civil" id="Estado civil">
                             <option value="C">Casado</option>
                             <option value="S">Soltero</option>
-                        </select></h3>
+                        </select></h3>-->
                     <h3>
-                        <label for="Desea recibir el Newletter?">Desea recibir el Newletter?</label>
+                        <label for="Desea recibir el Newletter?">Desea recibir las novedades?</label>
                         <input type="checkbox" name="acepta" value="1"></h3>
                     <h3>
-                        <div class="estiloH4">Comentarios</div>
+                        <div class="estiloH4">Indique brevemente sus preferencias de lectura</div>
                         <textarea name="comentarios" id="comentarios" cols="30" rows="10"></textarea>
+                    </h3><h3><label for="Desea dejar de recibir el Newletter?"><strong>Desea dejar de recibir las novedades?</strong></label>
+                        <input type="checkbox" name="dejar" value="1"></h3><h3>
+                        <div class="estiloH4">Indique brevemente motivo de desuscripción</div>
+                        <textarea name="comentarios" id="comentarios" cols="30" rows="5"></textarea>
                     </h3>
                     <h3>
                         <input type="reset" value="Limpiar Formulario">
                         <input type="submit" value="Enviar Formulario"></h3>
-                    <h3><label for="Desea dejar de recibir el Newletter?"><strong>Desea dejar de recibir el Newletter?</strong></label>
-                        <input type="checkbox" name="dejar" value="1"></h3>
+                    
                 </form>
             </div>
         </div>
     </div>
     <!-------------------- BUSCADOR GOOGLE ------------------>
     <div class="container-fluid">
-        <div class="row  justify-content-center">
-            <div class="col-lg-5 alineado">
-                <div><a href="https://www.google.com.ar" target="blank"><img src="../images/Google.gif" alt="Google">
+        <div class="row">
+            <div class="col medium-4 small-12 large-4 alineadoArticulos">
+                <div><a href="https://www.google.com.ar" target="blank"><img src="../images/Google.gif" alt="Google"></a>
                 </div>
                 <div>
                     <a href="https://www.google.com.ar" target="blank">Buscar en Google</a>
                 </div>
             </div>
             <!--------------------- WIKIPEDIA ------------------->
-            <div class="col-lg-5 alineado">
+            <div class="col medium-4 small-12 large-4 alineadoArticulos">
                 <div><a href="https://www.wikipedia.com.ar" target="blank"><img src="../images/wikipedia.gif" alt="Wikipedia">
                 </div>
                 <div>
                     <a href="https://www.wikipedia.com.ar" target="blank">Buscar en Wikipedia</a>
                 </div>
             </div>
-            <!-------------------- FOOTER -------------------->
-            <div class="col-lg-10 bordes alineado">
+        </div>
+    </div>
+    <!-------------------- FOOTER -------------------->
+    <div class="container-fluid">
+        <div class="row justify-content-center alineadoFooter">
+            <div class="col medium-4 small-12 large-4 ">
+                <div>
+                    <img src="../images/DiarioDeLibros1.jpg" alt="Diario de Libros">
+                </div>
+            </div>
+            <div class="col medium-4 small-12 large-4">
                 <div>Diario de Libros - Editado por X.X.X. [Xxxxx Xxxxxx Xxxxxxxx] - República Argentina
                 </div>
                 <div>Registro de Propiedad Intelectual I.N.P.I - Nº Ac. 000000000
                 </div>
                 <div>Contactos: redaccion@diariodelibros.com - publicidad@diariodelibros.com - suscripcion@diariodelibros.com
                 </div>
+            </div>
+            <div class="col medium-4 small-12 large-4">
+                <nav class="navbar navbar-expand-lg navbar-light modificarBg bg-light">
+                    <!--<a class="navbar-brand" href="#">Navbar</a>-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link " href="#"><span class="nav--logoFace">
+                                        <img src="../images/facebook_1.png" alt="Facebook"></a></span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="nav--logoInsta"><img src="../images/instagram.png" alt="Instagram"></a></span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="nav--logoTuit"><img src="../images/twitter.png" alt="Twitter"></a></span>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><span class="nav--logoWhat"><img src="../images/whatsapp.jpg" alt="WhatsApp"></a></span>
+                            </li>
+                            <!--<li class="nav-item">
+                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                            </li>-->
+                        </ul>
+                    </div>
+                </nav>
             </div>
         </div>
     </div>
